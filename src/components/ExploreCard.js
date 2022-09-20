@@ -24,7 +24,12 @@ const CardStyle = styled.div`
         color: rgb(255, 255, 255);
 
         .text_title {
+            display: flex;
+            align-items: center;
 
+            div {
+                margin-right: 5px;
+            }
         }
 
         div {

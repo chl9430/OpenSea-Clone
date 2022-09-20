@@ -1,12 +1,9 @@
-
-import Header from "./components/Header"
-import Explore from "./components/Explore"
+import Main from "./Main"
 
 function App() {
   return (
     <>
-      <Header/>
-      <Explore/>
+      <Main/>
     </>
   );
 }

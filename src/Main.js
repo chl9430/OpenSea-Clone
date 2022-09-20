@@ -1,9 +1,11 @@
 import styled from "styled-components"
 import { IoChevronBackSharp, IoChevronForwardSharp } from "react-icons/io5";
 
-import ExploreCard from "./ExploreCard"
+import Header from "./components/Header"
+import ExploreCard from "./components/ExploreCard"
 
-const ExploreStyle = styled.div`
+const MainStyle = styled.div`
+.explore_group {
     background: green;
     display: flex;
     position: relative;
@@ -32,19 +34,23 @@ const ExploreStyle = styled.div`
     .explore_left {
         left: -24px;
     }
+}
 `
 
-const Explore = () => {
+const Main = () => {
     return (
-        <ExploreStyle className="explore_group">
+    <MainStyle>
+        <Header/>
+        <div className="explore_group">
             <button className="explore_left"><IoChevronBackSharp size="30"/></button>
             <button className="explore_right"><IoChevronForwardSharp size="30"/></button>
             <ExploreCard/>
             <ExploreCard/>
             <ExploreCard/>
             <ExploreCard/>
-        </ExploreStyle>
+        </div>
+    </MainStyle>
     )
 }
 
-export default Explore;
+export default Main;
