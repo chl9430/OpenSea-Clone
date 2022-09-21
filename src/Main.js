@@ -4,9 +4,10 @@ import { IoChevronBackSharp, IoChevronForwardSharp, IoChevronDownSharp } from "r
 import Header from "./components/Header";
 import ExploreCard from "./components/ExploreCard";
 import ChartItem from "./components/ChartItem"
+import ItemCard from "./components/ItemCard"
 
 const MainStyle = styled.div`
-padding: 0px 32px;
+padding: 0px 64px;
 
 & * {
     font-family: 'Poppins', sans-serif;
@@ -45,6 +46,8 @@ padding: 0px 32px;
 }
 
 .main_chart {
+    margin-bottom: 30px;
+    
     .chart_header {
         display: flex;
         justify-content: space-between;
@@ -144,6 +147,21 @@ padding: 0px 32px;
         }
     }
 }
+
+.New_category {
+    .category_header {
+        font-size: 32px;
+        line-height: 40px;
+        font-weight: 600;
+        margin-bottom: 36px;
+    }
+
+    .category_content {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 24px;
+    }
+}
 `;
 
 const Main = () => {
@@ -205,6 +223,20 @@ const Main = () => {
                 <ChartItem/>
             </div>
           </div>
+        </div>
+      </div>
+      <div className="New_category">
+        <div className="category_header">
+            New and notable
+        </div>
+        <div className="category_content">
+            <ItemCard/>
+            <ItemCard/>
+            <ItemCard/>
+            <ItemCard/>
+            <ItemCard/>
+            <ItemCard/>
+            <ItemCard/>
         </div>
       </div>
     </MainStyle>
