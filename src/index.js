@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom/client';
 import { Reset } from "styled-reset"
 import reportWebVitals from './reportWebVitals';
 import './styles/global.css';
-import './styles/variable.css';
 import App from './App';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
