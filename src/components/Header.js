@@ -1,14 +1,23 @@
 import { MdOutlineAccountCircle } from "react-icons/md";
 import { MdOutlineAccountBalanceWallet } from "react-icons/md";
+import { HiOutlineSearch } from "react-icons/hi"
 import styled from "styled-components"
 
 const HeaderStyle = styled.nav`
 .header_navigation {
     display: flex;
     height: 72px;
-    padding: 0px 32px;
     align-items: center;
     justify-content: space-between;
+    border-bottom: 0.5px solid rgba(229, 232, 235, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    z-index: 1;
+    padding: 0 64px;
+    box-sizing: border-box;
+    background: white;
 
     a {
         color: black;
@@ -34,12 +43,24 @@ const HeaderStyle = styled.nav`
     }
     
     .header_searchbar {
-        border-radius: 12px;
         flex-grow: 1;
         margin-right: 32px;
-        border: none;
-        background: red;
-        height: 48px;
+        position: relative;
+
+        input {
+            border-radius: 12px;
+            border: 2px solid rgb(229, 232, 235);
+            height: 45px;
+            padding: 8px 32px;
+            width: 100%;
+        }
+
+        svg {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            color: rgb(138, 147, 155);
+        }
     }
     
     .header_menu {
@@ -56,14 +77,14 @@ const HeaderStyle = styled.nav`
 }
 
 .header_intro {
-    background: blue;
+    margin-top: 72px;
     height: 132px;
     display: flex;
     align-items: center;
     justify-content: center;
 
     p {
-        color: white;
+        color: black;
         font-size: 40px;
         font-weight: 700;
     }
@@ -78,7 +99,10 @@ const Header = () => {
                     <img className="home_icon" src="https://opensea.io/static/images/logos/opensea.svg" alt="이미지"/>
                     <span className="home_text">OpenSea</span>
                 </a>
-                <input className="header_searchbar" type="text"></input>
+                <div className="header_searchbar">
+                    <HiOutlineSearch/>
+                    <input type="text" placeholder="Search items, collections, and accounts"></input>
+                </div>
                 <ul className="header_menu">
                     <a href="index.js">Explore</a>
                     <a href="index.js">Stats</a>
