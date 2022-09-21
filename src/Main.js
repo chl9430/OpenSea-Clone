@@ -3,6 +3,7 @@ import { IoChevronBackSharp, IoChevronForwardSharp } from "react-icons/io5";
 
 import Header from "./components/Header";
 import ExploreCard from "./components/ExploreCard";
+import ChartItem from "./components/ChartItem"
 
 const MainStyle = styled.div`
   .explore_group {
@@ -71,7 +72,13 @@ const Main = () => {
               <div>FLOOR PRICE</div>
               <div>VOLUME</div>
             </div>
-            <div className="list_item"></div>
+            <div className="list_item">
+                <ChartItem/>
+                <ChartItem/>
+                <ChartItem/>
+                <ChartItem/>
+                <ChartItem/>
+            </div>
           </div>
           <div className="content_list">
             <div className="list_header">
@@ -79,7 +86,13 @@ const Main = () => {
               <div>FLOOR PRICE</div>
               <div>VOLUME</div>
             </div>
-            <div className="list_item"></div>
+            <div className="list_item">
+                <ChartItem/>
+                <ChartItem/>
+                <ChartItem/>
+                <ChartItem/>
+                <ChartItem/>
+            </div>
           </div>
         </div>
       </div>
