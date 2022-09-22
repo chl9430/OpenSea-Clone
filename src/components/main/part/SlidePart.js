@@ -8,11 +8,12 @@ const SlideStyle = styled.div`
 display: flex;
   position: relative;
   justify-content: space-between;
-  padding: 0px 32px;
+  margin-left: 32px;
+  margin-right: 32px;
 
   button {
     position: absolute;
-    bottom: 50%;
+    bottom: 132px;
     z-index: 1;
     background: white;
     border: none;

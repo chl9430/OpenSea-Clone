@@ -40,7 +40,7 @@ padding: 12px 8px;
     }
 }
 
-div:nth-child(2) {
+.item_floorprice {
     width: 20%;
     font-weight: 600;
     font-size: 16px;
@@ -48,7 +48,7 @@ div:nth-child(2) {
     text-align: right;
 }
 
-div:last-child {
+.item_volume {
     width: 20%;
     font-weight: 600;
     font-size: 16px;
@@ -66,8 +66,8 @@ export default function ChartItem(props) {
                     <div>{props.title}</div>
                     {props.verified && <MdOutlineVerified/>}
                 </div>
-                <div>{props.floorPrice}</div>
-                <div>{props.volume}</div>
+                <div className="item_floorprice">{props.floorPrice}</div>
+                <div className="item_volume">{props.volume}</div>
         </ChartItemStyle>
     )
 }
