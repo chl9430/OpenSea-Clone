@@ -5,6 +5,7 @@ import Header from "./components/Header";
 import ExploreCard from "./components/ExploreCard";
 import ChartItem from "./components/ChartItem"
 import ItemCard from "./components/ItemCard"
+import CategoryCard from "./components/CategoryCard";
 
 const MainStyle = styled.div`
 padding: 0px 64px;
@@ -14,12 +15,15 @@ padding: 0px 64px;
     box-sizing: border-box;
 }
 
+> div {
+  margin-bottom: 70px;
+}
+
 .explore_group {
     display: flex;
     position: relative;
     justify-content: space-between;
-    margin: 0px 32px;
-    margin-bottom: 30px;
+    padding: 0px 32px;
 
     button {
       position: absolute;
@@ -46,8 +50,6 @@ padding: 0px 64px;
 }
 
 .main_chart {
-    margin-bottom: 30px;
-    
     .chart_header {
         display: flex;
         justify-content: space-between;
@@ -148,7 +150,7 @@ padding: 0px 64px;
     }
 }
 
-.New_category {
+.new_category {
     .category_header {
         font-size: 32px;
         line-height: 40px;
@@ -161,6 +163,21 @@ padding: 0px 64px;
         grid-template-columns: 1fr 1fr 1fr;
         gap: 24px;
     }
+}
+
+.category_group {
+  .group_header {
+      font-size: 32px;
+      line-height: 40px;
+      font-weight: 600;
+      margin-bottom: 36px;
+  }
+
+  .group_content {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 24px;
+  }
 }
 `;
 
@@ -225,7 +242,7 @@ const Main = () => {
           </div>
         </div>
       </div>
-      <div className="New_category">
+      <div className="new_category">
         <div className="category_header">
             New and notable
         </div>
@@ -236,7 +253,16 @@ const Main = () => {
             <ItemCard/>
             <ItemCard/>
             <ItemCard/>
-            <ItemCard/>
+        </div>
+      </div>
+      <div className="category_group">
+        <div className="group_header">
+          Browse by category
+        </div>
+        <div className="group_content">
+          <CategoryCard/>
+          <CategoryCard/>
+          <CategoryCard/>
         </div>
       </div>
     </MainStyle>

@@ -1,13 +1,11 @@
 import { MdOutlineVerified } from "react-icons/md"
 import styled from "styled-components"
 
-const ItemCardStyle = styled.div`
-width: 492px;
-height: 360.75px;
+const ItemCardStyle = styled.a`
+width: 100%;
 border-radius: 10px;
 box-shadow: rgb(0 0 0 / 4%) 0px 4px 8px;
 transition: box-shadow 0.25s ease-in-out 0s;
-position: relative;
 overflow: hidden;
 
 &:hover {
@@ -15,16 +13,14 @@ overflow: hidden;
 }
 
 .card_image {
-    height: 0;
-
     img {
         width: 100%;
     }
 }
 
 .card_title {
-    display: flex;
-    padding: 16px;
+    height: 80px;
+    position: relative;
 
     .title_image {
         width: 78px;
@@ -38,7 +34,7 @@ overflow: hidden;
         overflow: hidden;
 
         img {
-            width: 100%;
+            height: 100%;
         }
     }
 

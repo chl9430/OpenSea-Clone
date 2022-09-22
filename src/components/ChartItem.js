@@ -1,7 +1,7 @@
 import { MdOutlineVerified } from "react-icons/md"
 import styled from "styled-components"
 
-const ChartItemStyle = styled.div`
+const ChartItemStyle = styled.a`
 display: flex;
 align-items: center;
 padding: 12px 8px;
