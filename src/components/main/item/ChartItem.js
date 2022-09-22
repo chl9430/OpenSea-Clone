@@ -26,6 +26,7 @@ padding: 12px 8px;
     img {
         width: 72px;
         height: 72px;
+        border: 1px solid rgba(0, 0, 0, 0.1);
         border-radius: 12px;
         margin-right: 24px;
     }
@@ -35,6 +36,7 @@ padding: 12px 8px;
         font-size: 16px;
         line-height: 24px;
         margin-right: 4px;
+        text-align: left;
     }
 }
 
@@ -55,19 +57,17 @@ div:last-child {
 }
 `
 
-const ChartItem = () => {
+export default function ChartItem(props) {
     return (
-    <ChartItemStyle className="chart_item">
-        <div className="item_title">
-            <div>1</div>
-            <img src="https://i.seadn.io/gcs/files/e463e47af86531d7e950cfbeba12836f.png?w=500&auto=format" alt="chartImage"/>
-            <div>50 Years of Atari</div>
-            <MdOutlineVerified/>
-        </div>
-        <div>0.35ETH</div>
-        <div>334ETH</div>
-    </ChartItemStyle>
+        <ChartItemStyle className="chart_item">
+                <div className="item_title">
+                    <div>{props.order}</div>
+                    <img src={props.img} alt="chartImage"/>
+                    <div>{props.title}</div>
+                    {props.verified && <MdOutlineVerified/>}
+                </div>
+                <div>{props.floorPrice}</div>
+                <div>{props.volume}</div>
+        </ChartItemStyle>
     )
 }
-
-export default ChartItem;

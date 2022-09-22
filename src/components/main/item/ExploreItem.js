@@ -1,7 +1,7 @@
 import { MdOutlineVerified } from "react-icons/md"
 import styled from "styled-components"
 
-const ItemCardStyle = styled.a`
+const CardStyle = styled.a`
 width: 100%;
 border-radius: 10px;
 box-shadow: rgb(0 0 0 / 4%) 0px 4px 8px;
@@ -15,6 +15,8 @@ overflow: hidden;
 .card_image {
     img {
         width: 100%;
+        height: 282.73px;
+        object-fit: cover;
     }
 }
 
@@ -55,22 +57,22 @@ overflow: hidden;
 }
 `
 
-const ItemCard = () => {
+const ItemCard = (props) => {
     return (
-        <ItemCardStyle className="item_card">
+        <CardStyle className="explore_card">
             <div className="card_image">
-                <img src="https://i.seadn.io/gae/SUiD7Wp1tpzKpzjPCWiiS8ND784aRxDRRywiAKUyVCplW3DKfAQWp4Y9bQhMIFjLbUOJntqNvRlax-9eiKlDV_nGZFzhPahSAPuykA?auto=format&h=400" alt="이미지"></img>
+                <img src={props.mainImg} alt="이미지"></img>
             </div>
             <div className="card_title">
                 <div className="title_image">
-                    <img src="https://i.seadn.io/gcs/files/93ea4724fcb5596e34f3af1b63c9d7c6.gif?auto=format&w=128&h=128" alt="이미지"></img>
+                    <img src={props.smallImg} alt="이미지"></img>
                 </div>
                 <div className="title_name">
-                    <span>MoonCats</span>
-                    <MdOutlineVerified/>
+                    <span>{props.title}</span>
+                    {props.verified && <MdOutlineVerified/>}
                 </div>
             </div>
-        </ItemCardStyle>
+        </CardStyle>
     )
 }
 

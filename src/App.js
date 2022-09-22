@@ -1,9 +1,9 @@
-import Main from "./Main"
+import MainPage from "./components/main/page/MainPage"
 
 function App() {
   return (
     <>
-      <Main/>
+      <MainPage/>
     </>
   );
 }

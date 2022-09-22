@@ -29,17 +29,17 @@ overflow: hidden;
 }
 `
 
-const CategoryCard = () => {
+const CategoryItem = (props) => {
     return (
         <CategoryCardStyle className="category_card">
             <div className="card_image">
-                <img src="https://opensea.io/static/images/categories/art.png" alt="이미지"></img>
+                <img src={props.mainImg} alt="이미지"></img>
             </div>
             <div className="card_title">
-                <span>Art</span>
+                <span>{props.title}</span>
             </div>
         </CategoryCardStyle>
     )
 }
 
-export default CategoryCard;
+export default CategoryItem;
