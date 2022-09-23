@@ -107,10 +107,10 @@ export default function ChartPart(props) {
     const chartContent = [];
     let indexContent;
 
-    for(let i = 0; i < props.row; i++) { // 0, 1, 2
+    for(let i = 0; i < props.row; i++) {
         indexContent = [];
 
-        for(let j = i * Math.floor(props.data.length / props.row); j < (i + 1) * Math.floor(props.data.length / props.row); j++) { // 2; 2 < 3;
+        for(let j = i * Math.floor(props.data.length / props.row); j < (i + 1) * Math.floor(props.data.length / props.row); j++) {
             indexContent.push(<ChartItem key={j * Math.random()} order={j + 1} img={props.data[j].img} title={props.data[j].title} floorPrice={props.data[j].floorPrice} volume={props.data[j].volume} verified={props.data[j].verified}/>);
         }
 
