@@ -38,18 +38,17 @@ div {
 }
 `
 
-export default function SlideItem(){
+export default function SlideItem(props) {
     return (
         <CardStyle className="slide_card">
-            <img src="https://i.seadn.io/gcs/static/promocards/SNKRZ.png?auto=format&w=800&h=800" alt="이미지"/>
+            <img src={props.img} alt="이미지"/>
             <div className="card_text">
                 <div className="text_title">
-                    <div>THE SNKRZ NFT</div>
+                    <div>{props.title}</div>
                     <MdOutlineVerified/>
                 </div>
-                <div>Floor: 1850 KLAY</div>
+                <div>{props.owner}</div>
             </div>
         </CardStyle>
     )
 }
-
