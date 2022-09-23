@@ -38,10 +38,15 @@ div {
 }
 `
 
+const ItemImage = styled.img`
+
+`;
+
+
 export default function SlideItem(props) {
     return (
         <CardStyle className="slide_card">
-            <img src={props.img} alt="이미지"/>
+            <ItemImage src={props.img} alt="이미지"/>
             <div className="card_text">
                 <div className="text_title">
                     <div>{props.title}</div>
