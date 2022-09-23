@@ -18,7 +18,6 @@ const ExploreStyle = styled.div`
 `
 
 export default function ExplorePart(props) {
-    const dataArr = props.data;
     const contentArr = [];
 
     if (props.dataType === "explore") {

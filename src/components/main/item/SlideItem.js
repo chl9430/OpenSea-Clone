@@ -10,34 +10,31 @@ height: 312px;
 border: 1px solid rgba(0, 0, 0, 0.1);
 position: relative;
 
-img {
+> img {
     width: 100%;
-    height: 100%;
+    object-fit: cover;
 }
 
 .card_text {
     position: absolute;
-    width: 100%;
-    bottom: 0px;
-    left: 0px;
+    bottom: 0;
     padding-left: 16px;
     padding-bottom: 12px;
-    color: rgb(255, 255, 255);
+    color: white;
 
     .text_title {
-        display: flex;
-        align-items: center;
-
-        div {
-            margin-right: 5px;
-        }
-    }
+    display: flex;
+    align-items: center;
 
     div {
-        font-weight: 600;
-        font-size: 16px;
-        line-height: normal;
+        margin-right: 5px;
     }
+}
+
+div {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: normal;
 }
 `
 
