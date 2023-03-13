@@ -30,6 +30,7 @@ position: relative;
         margin-right: 5px;
     }
 }
+}
 
 div {
     font-weight: 600;
@@ -38,19 +39,17 @@ div {
 }
 `
 
-const ItemImage = styled.img`
-
-`;
+const ItemImage = styled.img``
 
 
 export default function SlideItem(props) {
     return (
         <CardStyle className="slide_card">
-            <ItemImage src={props.img} alt="이미지"/>
+            <ItemImage src={props.img} alt="이미지" />
             <div className="card_text">
                 <div className="text_title">
                     <div>{props.title}</div>
-                    <MdOutlineVerified/>
+                    <MdOutlineVerified />
                 </div>
                 <div>{props.owner}</div>
             </div>

@@ -6,7 +6,7 @@ import { IoChevronBackSharp, IoChevronForwardSharp } from "react-icons/io5";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-const SlideStyle = styled.div`
+const SliderWrap = styled.div`
 .slick-slider {
   .slick-arrow {
     z-index: 1;
@@ -34,7 +34,7 @@ const SlideStyle = styled.div`
 }
 `
 
-export default function SlidePart({dots, infinitySlide, slideSpeed, showSlideCount, draggable, children}) {
+export default function SliderPart({ dots, infinitySlide, slideSpeed, showSlideCount, draggable, children, data }) {
   const settings = {
     dots: dots,
     infinite: infinitySlide,
@@ -46,10 +46,10 @@ export default function SlidePart({dots, infinitySlide, slideSpeed, showSlideCou
   };
 
   return (
-    <SlideStyle>
+    <SliderWrap>
       <Slider {...settings}>
         {children}
       </Slider>
-    </SlideStyle>
+    </SliderWrap>
   )
 }
